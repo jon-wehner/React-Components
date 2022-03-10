@@ -5,9 +5,21 @@ export default function Counter() {
   return (
     <div>
       <h1>this is a counter</h1>
-      <span>{count}</span>
-      <button type="button" onClick={() => setCounter(count - 1)}>Decrement</button>
-      <button type="button" onClick={() => setCounter(count + 1)}>Increment</button>
+      <div className="flex mx-auto max-w-sm">
+        <span>{count}</span>
+        <div>
+          <button type="button" onClick={() => setCounter(count - 1)}>
+            <span>
+              -
+            </span>
+          </button>
+          <button type="button" onClick={() => setCounter(count + 1)}>
+            <span>
+              +
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
