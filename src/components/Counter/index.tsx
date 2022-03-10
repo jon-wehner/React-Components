@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 export default function Counter() {
   const [count, setCounter] = useState(0);
   return (
-    <div>
+    <div className="rounded-xl shadow-lg py-10 bg-white max-w-sm my-10 mx-auto">
       <h1>this is a counter</h1>
-      <div className="flex mx-auto max-w-sm">
-        <span>{count}</span>
+      <div className="flex-col mx-auto max-w-sm">
+        <span className="text-2xl">{count}</span>
         <div>
-          <button type="button" onClick={() => setCounter(count - 1)}>
+          <button className="px-3 text-2xl text-rose-500" type="button" onClick={() => setCounter(count - 1)}>
             <span>
               -
             </span>
           </button>
-          <button type="button" onClick={() => setCounter(count + 1)}>
+          <button className="px-3 text-2xl text-lime-500" type="button" onClick={() => setCounter(count + 1)}>
             <span>
               +
             </span>
